@@ -15,14 +15,14 @@ function Authorization() {
                         <input type="password" className="form-control" id="inputPassword4" placeholder="Password"/>
                     </div>
                 </div>
-                <div classname="form-row">
-                    <div classname="form-group">
-                        <label htmlfor="inputaddress">first name</label>
-                        <input type="text" classname="form-control" id="inputaddress" placeholder="bibigul"/>
+                <div className="form-row">
+                    <div className="form-group col-md-6">
+                        <label htmlfor="inputName">First name</label>
+                        <input type="text" className="form-control" id="inputName" placeholder="Bibigul"/>
                     </div>
-                    <div classname="form-group">
-                        <label htmlfor="inputaddress">address</label>
-                        <input type="text" classname="form-control" id="inputaddress" placeholder="1234 main st"/>
+                    <div className="form-group col-md-6">
+                        <label htmlfor="inputAddress">Address</label>
+                        <input type="text" className="form-control" id="inputName" placeholder="1234 main st"/>
                     </div>
                 </div>
                 <button type="submit" className="btn btn-primary">Sign in</button>
