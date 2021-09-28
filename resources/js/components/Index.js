@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Nav from './Nav/Nav';
-import Authorization from './authorization/Authorization';
-import Login from './login/Login';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
+import Login from './authorization/login'
+import Signup from './signup/signup'
+import Profile from "./authorization/profile";
+import {BrowserRouter, Route} from 'react-router-dom';
 function Index() {
     return (
         <BrowserRouter>
-            <div className="container">
                 <Nav/>
-                    <Route path="/auth" component={Authorization}/>
-                    <Route path="/login" component={Login}/>
-            </div>
+                    {/*<Route path="/home" component={Index}/>*/}
+                    <Route path="/auth" component={Login}/>
+                    <Route path="/login" component={Signup}/>
+                    <Route path="/profile" component={Profile}/>
         </BrowserRouter>
     );
 }
@@ -21,5 +21,4 @@ export default Index;
 if (document.getElementById('index')) {
     ReactDOM.render(<Index />, document.getElementById('index'));
 }
-require('./login/Login');
-require('./authorization/Authorization');
+

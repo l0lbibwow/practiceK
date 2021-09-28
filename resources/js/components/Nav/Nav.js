@@ -1,28 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom";
+import Box from "@mui/material/Box";
+import {AppBar, IconButton, Toolbar, Typography} from "@mui/material";
+import Button from '@mui/material/Button';
+import MenuIcon from '@mui/icons-material/Menu';
+
 function Nav() {
     return (
-        <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">Главная</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/login">Регистрация</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/auth">Авторизация</Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+    <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+            <Toolbar>
+                <IconButton
+                    size="large"
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    sx={{ mr: 2 }}
+                >
+                    <MenuIcon />
+                </IconButton>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    Главная
+                </Typography>
+                <Button color = "inherit"><Link className="nav-link" to="/auth" >Авторизация</Link></Button>
+                <Button color = "inherit"><Link className="nav-link" to="/login" >Регистрация</Link></Button>
+            </Toolbar>
+        </AppBar>
+    </Box>
     );
 }
 
