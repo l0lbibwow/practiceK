@@ -10,7 +10,7 @@ function Index() {
         <BrowserRouter>
                 <Nav/>
                     {/*<Route path="/home" component={Index}/>*/}
-                    <Route path="/auth" component={Login}/>
+                    <Route path="/autheration" component={Login}/>
                     <Route path="/login" component={Signup}/>
                     <Route path="/profile" component={Profile}/>
         </BrowserRouter>
